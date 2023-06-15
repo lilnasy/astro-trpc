@@ -4,7 +4,7 @@ import { initTRPC } from '@trpc/server'
 
 const { router: router_, procedure } = initTRPC.context<{}>().create()
 
-let count = 0
+export let count = 0
 
 const router = router_({
     increment: procedure.mutation(() => ++count),
